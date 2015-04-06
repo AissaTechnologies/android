@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name" translable="true">Sunshine</string>
+    <string name="hello_world" translable="true">Buna ziua lume!</string>
+    <string name="action_settings" translable="true">Impostatii</string>
+    <string name="today_june_24" translable="true">Azi, 24 iunie</string>
+    <string name="grades_21">21°</string>
+    <string name="grades_8">8°</string>
+    <string name="cloudy" translable="true">Innourat</string>
+    <string name="list_item_forecast" translable="true">Azi - Soare - 88 / 63</string>
+    <string name="action_refresh" translable="true">Refreseaza</string>
+
+</resources>

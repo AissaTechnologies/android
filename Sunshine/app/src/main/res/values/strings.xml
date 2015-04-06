@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name" translatable="true">Sunshine</string>
+    <string name="hello_world" translatable="true">Hello world!</string>
+
+    <string name="today_june_24" translatable="true">Today, June 24</string>
+    <string name="grades_21">21°</string>
+    <string name="grades_8">8°</string>
+    <string name="cloudy" translatable="true">Cloudy</string>
+    <string name="list_item_forecast" translatable="true">Today - Sunny - 88 / 63</string>
+
+    <!-- ActionBar -->
+    <string name="action_settings" translatable="true">Settings</string>
+    <string name="action_map" translatable="true">Map Location</string>
+    <string name="action_share" translatable="true">Share</string>
+
+    <!-- Menu label to fetch updated weather info from the server -->
+    <string name="action_refresh" translatable="true">Refresh</string>
+    <string name="title_activity_detail">Details</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Label for the location preference [CHAR  LIMIT = 30] -->
+    <string name="pref_location_label">Location</string>
+    <!-- Key name for storing location in SharedPreference [CHAR  LIMIT = NONE] -->
+    <string name="pref_location_key" translable="true">location</string>
+    <!-- Default postal code for the location preference [CHAR  LIMIT = NONE] -->
+    <string name="pref_location_default" translable="false">94043</string>
+
+    <!-- Label for the temperature units preference - Metric(celsius) & Imperial(fahrenheit) -->
+    <!-- Label for metric option in temperature unit preference [CHAR LIMIT=25] -->
+    <string name="pref_units_label_metric">Metric</string>
+    <!-- Label for imperial option in temperature unit preference [CHAR LIMIT=25] -->
+    <string name="pref_units_label_imperial">Imperial</string>
+    <string name="pref_units_label">Temperature Units</string>
+    <string name="pref_units_key" translable="true">units</string>
+    <string name="pref_units_metric" translable="true">Metric</string>
+    <string name="pref_units_imperial" translable="true">Imperial</string>
+</resources>

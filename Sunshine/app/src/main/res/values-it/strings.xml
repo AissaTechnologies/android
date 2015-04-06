@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name" translable="true">Sunshine</string>
+    <string name="hello_world" translable="true">Ciao mondo!</string>
+    <string name="action_settings" translable="true">Impostazioni</string>
+    <string name="today_june_24" translable="true">Oggi, 24 giugno</string>
+    <string name="grades_21">21°</string>
+    <string name="grades_8">8°</string>
+    <string name="cloudy" translable="true">Nuvoloso</string>
+    <string name="list_item_forecast" translable="true">Oggi - Sole - 88 / 63</string>
+    <string name="action_refresh" translable="true">Ricarica</string>
+
+</resources>
