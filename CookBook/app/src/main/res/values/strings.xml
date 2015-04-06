@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">CookBook</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Menu label to fetch updated recipe info from the server -->
+    <string name="action_refresh" translatable="false">Refresh</string>
+    <string name="title_activity_detail">Details</string>
+    <string name="title_activity_settings">Settings</string>
+    <!-- Label for the location preference [CHAR LIMIT=30] -->
+    <string name="pref_location_label">Location</string>
+    <!-- Key name for storing location in SharedPreferences [CHAR LIMIT=NONE] -->
+    <string name="pref_location_key" translatable="false">location</string>
+    <!-- Default postal code for location preference [CHAR LIMIT=NONE] -->
+    <string name="pref_location_default" translatable="false">00182</string>
+    <!-- Food prefs -->
+    <string name="pref_food_label">Food</string>
+    <string name="pref_food_key" translatable="false">food</string>
+    <string name="pref_food_default" translatable="false">lasagna</string>
+    <!-- Units prefs -->
+    <string name="pref_units_label">Measure Units</string>
+    <string name="pref_units_key" translatable="false">units</string>
+    <!-- units labels -->
+    <string name="pref_units_label_cup">cup</string>
+    <string name="pref_units_label_spoon">spoon</string>
+    <string name="pref_units_label_flOz">flOz</string>
+    <string name="pref_units_label_gram">gram</string>
+    <!-- units values -->
+    <string name="pref_units_cup">cup</string>
+    <string name="pref_units_spoon">spoon</string>
+    <string name="pref_units_flOz">flOz</string>
+    <string name="pref_units_gram">gram</string>
+    <string name="pref_units_default" translatable="false">gram</string>
+
+    <!-- Map location menu -->
+    <string name="action_map">Map Location</string>
+    <!-- Share menu -->
+    <string name="action_share">Share</string>
+</resources>
