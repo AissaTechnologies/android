@@ -6,12 +6,9 @@ package com.aissatech.android.cookbook;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -22,16 +19,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -126,10 +113,14 @@ public class RecipeFragment extends Fragment{
 
     // update recipe data
     private void updateRecipe() {
-        FetchDietTask dietTask = new FetchDietTask();
+        //FetchDietTask dietTask = new FetchDietTask();
+        // using the external FetchDietTask java file
+        FetchDietTask dietTask = new FetchDietTask(getActivity(), mRecipeAdapter);
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getActivity());
         String recipe = prefs.getString(getString(R.string.pref_food_key), getString(R.string.pref_food_default));
+//        String recipe1 = prefs.getString(getString(R.string.pref_location_key), getString(R.string.pref_location_default));
         dietTask.execute(recipe);
+//        dietTask.execute(recipe1);
     }
 
     @Override
@@ -137,8 +128,10 @@ public class RecipeFragment extends Fragment{
         super.onStart();
         updateRecipe();
     }
-
+    // moved on the external FetchDietTask java file
+    /*
     public class FetchDietTask extends AsyncTask<String, Void, String[]> {
+
         private final String LOG_TAG = FetchDietTask.class.getSimpleName();
 
         @Override
@@ -150,17 +143,18 @@ public class RecipeFragment extends Fragment{
 
             // Will contain the raw JSON response as a string.
             String recipeJsonStr = null;
-            String key = "660fba1454becb3e8f3a1c30327dec1f";
+            String key = "660fba1454becb3e8f3a1c30327dec1f";//key dev
             int count = 30;
 
             try {
                 // Construct the URL for the Food2Fork query
                 //URL url = new URL("http://food2fork.com/api/search?key=660fba1454becb3e8f3a1c30327dec1f&q=carbonara");
+                //URL url = new URL("http://food2fork.com/api/search?key=660fba1454becb3e8f3a1c30327dec1f&q=Italy");
 
                 // build URIs with params, key and query as params
                 final String RECIPE_BASE_URL = "http://food2fork.com/api/search?";
-                final String KEY_PARAM = "key";
-                final String QUERY_PARAM = "q";
+                final String KEY_PARAM = "key";//keydev
+                final String QUERY_PARAM = "q";//query=food || location
 
                 Uri builtUri = Uri.parse(RECIPE_BASE_URL).buildUpon()
                                   .appendQueryParameter(KEY_PARAM, key)
@@ -228,7 +222,7 @@ public class RecipeFragment extends Fragment{
 
             return null;
         }
-
+ */
         // parsing JSON from server
 
         /**
@@ -238,6 +232,7 @@ public class RecipeFragment extends Fragment{
          * Fortunately parsing is easy:  constructor takes the JSON string and converts it
          * into an Object hierarchy for us.
          */
+  /*
         private String[] getDietDataFromJson(String recipeJsonStr, int count)
                 throws JSONException {
 
@@ -272,7 +267,6 @@ public class RecipeFragment extends Fragment{
 
                 // publisher is the first element of the recipeObject
                 publisher = recipeObject.getString(F2F_PUBLISHER);
-
                 url = recipeObject.getString(F2F_URL);
                 title = recipeObject.getString(F2F_TITLE);
                 sourceUrl = recipeObject.getString(F2F_SOURCE_URL);
@@ -283,6 +277,14 @@ public class RecipeFragment extends Fragment{
 
                 // result string array
                 resultStrs[i] = recipeId + " - " + title + " - " + publisher;
+//                resultStrs[i] = publisher + " - " +
+//                                url + " - " +
+//                                title + " - " +
+//                                sourceUrl + " - " +
+//                                recipeId + " - " +
+//                                imageUrl + " - " +
+//                                socialRank + " - " +
+//                                publisherUrl;
                 Log.v("RecipeFragment", "Camelia,  array, element" + i + " = " + resultStrs[i]);
             }
 
@@ -303,4 +305,5 @@ public class RecipeFragment extends Fragment{
             }
         }
     }
+    */
 }
